@@ -1,5 +1,9 @@
 # Pacman
 
+
+https://www.youtube.com/watch?v=dScq4P5gn4A
+
+
 ## **Como me bajo esto ?**
 
 ### 1) Infra basica: Instalar Node JS
