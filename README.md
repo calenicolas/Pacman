@@ -38,9 +38,6 @@ correr todos esos comandos.**
 *sudo apt install git*
 
 
-Termina de instalar, abrimos otra consola y
-
-
 *mkdir workdir*
 
 
@@ -53,6 +50,9 @@ Termina de instalar, abrimos otra consola y
 ### 3) Infra especifica de nuestro proyecto: npm
 
 en la misma consola que hicimos el git clone, hacemos
+
+
+*cd pacman*
 
 
 *npm install*
