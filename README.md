@@ -29,9 +29,6 @@ Listo
 
 Si eso te devuelve algo, tenes node instalado
 
-**NOTA: Si no instalas linux de forma persistente, cada vez que reinicies desde el pendrive vas a tener que
-correr todos esos comandos.**
-
 ### 2) Infra para bajarnos el proyecto y poder subit camibios: Git
 
 
@@ -62,3 +59,6 @@ en la misma consola que hicimos el git clone, hacemos
 
 
 Deberia correr todo. 
+
+**NOTA: Si no instalas linux de forma persistente, cada vez que reinicies desde el pendrive vas a tener que
+correr todos esos comandos.**
