@@ -41,7 +41,7 @@ Si eso te devuelve algo, tenes node instalado
 *cd workdir*
 
 
-*git clone [...]*
+*git clone https://github.com/calenicolas/Pacman.git*
 
 
 ### 3) Infra especifica de nuestro proyecto: npm
