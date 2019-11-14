@@ -1,0 +1,64 @@
+# Pacman
+
+## **Como me bajo esto ?**
+
+### 1) Infra basica: Instalar Node JS
+Instalate un linux, una vez que lo tenes abris la consola y 
+
+
+*sudo apt update*
+
+
+*sudo apt upgrade*
+
+
+*sudo apt-get install curl*
+
+
+*curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -*
+
+
+*sudo apt-get install nodejs*
+
+
+Listo
+
+
+*node -v*
+
+
+Si eso te devuelve algo, tenes node instalado
+
+**NOTA: Si no instalas linux de forma persistente, cada vez que reinicies desde el pendrive vas a tener que
+correr todos esos comandos.**
+
+### 2) Infra para bajarnos el proyecto y poder subit camibios: Git
+
+
+*sudo apt install git*
+
+
+Termina de instalar, abrimos otra consola y
+
+
+*mkdir workdir*
+
+
+*cd workdir*
+
+
+*git clone [...]*
+
+
+### 3) Infra especifica de nuestro proyecto: npm
+
+en la misma consola que hicimos el git clone, hacemos
+
+
+*npm install*
+
+
+*npm run test*
+
+
+Deberia correr todo. 
