@@ -2,28 +2,35 @@ const should = require ("should");
 const Board = require ("../board.js")
 const Pacman = require ("../pacman")
 describe ("creando un board", function() {
- 
-    it("el board en el medio tiene un pacman", function() {
+    it("el board dibuja a un pacman en la posicion dada", function() {
 
-        const expectedPosition = {
-            x: 0,
-            y: 0
-        }
+        const board = new Board();
 
-        const pacman = new Pacman ();
+        const x = 0,
+              y = 1;
 
-        const actualPosition = pacman.getPosition(); 
-        should(actualPosition).be.eql(expectedPosition);
-    })
+        const drawnBoard = board.drawPacmanAt(x, y);
 
-    it("el board tiene pelotitas chicas", function() {
+        should(drawnBoard).be.eql(
+            ` * * * O * * * \n` +
+            ` * * * * * * * \n` +
+            ` * * * * * * * \n`
+        );
+    });
 
-        const expectedElement = new PelotaChica;
+    it("el board dibuja a un pacman en la posicion dada", function() {
 
-        PelotaChica.getPosition();
+        const board = new Board();
 
-        const 
-        
-    })
+        const x = 1,
+              y = -1;
 
-})
+        const drawnBoard = board.drawPacmanAt(x, y);
+
+        should(drawnBoard).be.eql(
+            ` * * * * * * * \n` +
+            ` * * * * * * * \n` +
+            ` * * * * O * * \n`
+        );
+    });
+});
