@@ -68,5 +68,4 @@ describe("creando un pacman", function () {
         should(actualPosition).be.eql(expectedPosition);
     });
     
-    
 });

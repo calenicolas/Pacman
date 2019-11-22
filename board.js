@@ -1,11 +1,16 @@
 class Board {
 
     constructor() {
-        this.cells = [
-            ["*", "*", "*", "*", "*", "*", "*", "\n"],
-            ["*", "*", "*", "*", "*", "*", "*", "\n"],
-            ["*", "*", "*", "*", "*", "*", "*", "\n"]
-        ];
+        this.cells = [];
+
+        for (let x = 0; x < 7; x++){
+            for (let y = 0; y < 3; y++){
+                const cell = new Cell(x, y);
+                this.cells.push(cell);
+            }
+        }
+
+        console.log(this.cells)
     }
 
     drawPacmanAt(x, y) {

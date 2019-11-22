@@ -1,8 +1,10 @@
 class Pacman {
 
-    constructor() {
+    constructor(observador) {
         this.x = 0;
         this.y = 0;
+
+        this.observador = observador;
     }
 
     moveRight() {
