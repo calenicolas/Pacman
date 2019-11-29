@@ -3,6 +3,10 @@
 
 https://www.youtube.com/watch?v=dScq4P5gn4A
 
+Documentos de ayuda:
+- [TDD. Como escribo los tests ?](./TDD.md)
+- [Modelado. Que represento para hacer pasar los tests ?](./modelado.md)
+
 
 ## **Como me bajo esto ?**
 

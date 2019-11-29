@@ -2,13 +2,35 @@
 - NUNCA escribir código productivo (fuera de la carpeta test) sin antes
 escribir un test y verlo fallar.
 - Si hay tests fallando, tomar siempre el camino mas corto para hacerlos 
-pasar.
+pasar. Siempre de a un caso por vez.
 - Respetar la regla del *Given, When, Then*
-*Given*: Contexto de la prueba. Ej: El pacman esta en x => 3; y => 0.
-*When*: Ejecucion a probar. Ej: El pacman se mueve a la derecha.
-*Then*: Comportamiento esperado. Ej: El pacman debe informar que su posicion es x => 4; y => 0.
+
+    *Given*: Contexto de la prueba. Ej: El pacman esta en x => 3; y => 0.
+    
+    *When*: Ejecucion a probar. Ej: El pacman se mueve a la derecha.
+    
+    *Then*: Comportamiento esperado. Ej: El pacman debe informar que su posicion es 
+    x => 4; y => 0.
 
 **Sugerencias**
 - Tomar casos de prueba puntuales, concretos y pequeños.
-- Arrancar por un test bien simple y hacerlo pasar devolviendo lo enunciado en el *Then* del test. 
-Una vez que lo hagas pasar, escribir un caso relacionado al caso anterior para hacerlo fallar (triangulacion de tests)
+- Arrancar por un test bien simple y hacerlo pasar devolviendo lo enunciado en el *Then* del 
+test. 
+Una vez que lo hagas pasar, escribir un caso relacionado al caso anterior para hacerlo 
+fallar (triangulacion de tests)
+
+**Ejemplo**
+
+El pacman debe moverse 1 posicion:
+
+const pacman = new Pacman() <- Esto es el _given_
+
+pacman.moveUp() <- Esto es el _when_
+
+const position = pacman.getPosition();
+
+should(position).be.eql({
+    x: 0,
+    y: 1
+}) <- Esto (en conjunto con la linea de arriba que nos devuelve la posicion y la guarda 
+en la variable position) es el _then_
