@@ -1,14 +1,40 @@
+const readline = require('readline');
+
+readline.emitKeypressEvents(process.stdin);
+process.stdin.setRawMode(true);
+
 const Pacman = require ("./pacman.js");
 const Board = require ("./board.js");
 
 const board = new Board();
 
-
 const pacman = new Pacman();
-pacman.moveUp();
-const position = pacman.getPosition();
 
+drawBoard(board, pacman);
 
-const drawnBoard = board.drawPacmanAt(position.x, position.y);
+process.stdin.on('keypress', (str, key) => {
+  if (key.ctrl && key.name === 'c') {
+    process.exit();
+  } else {
+    if(key.name === "up") {
 
-console.log(drawnBoard)
+        pacman.moveUp();
+    }
+
+    if(key.name === "down") {
+
+        pacman.moveDown();
+    }
+
+    drawBoard(board, pacman);
+  }
+});
+
+function drawBoard(board, pacman) {
+
+    const position = pacman.getPosition();
+    const drawnBoard = board.drawPacmanAt(position.x, position.y);
+
+    console.clear();
+    console.log(drawnBoard);
+}
