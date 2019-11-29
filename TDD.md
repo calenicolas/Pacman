@@ -22,7 +22,7 @@ fallar (triangulacion de tests)
 **Ejemplo**
 
 El pacman debe moverse 1 posicion:
-
+```javascript
 const pacman = new Pacman() <- Esto es el _given_
 
 pacman.moveUp() <- Esto es el _when_
@@ -34,3 +34,4 @@ should(position).be.eql({
     y: 1
 }) <- Esto (en conjunto con la linea de arriba que nos devuelve la posicion y la guarda 
 en la variable position) es el _then_
+```
