@@ -9,17 +9,16 @@ class Cell{
     drawPacman(x, y) {
 
         let saltoDeLinea = "";
-        if(this.x === 6) {
-            saltoDeLinea = '/n';
+        if(this.x === 3) {
+            saltoDeLinea = ' \n' ;
         }
 
-        console.log(this.x, this.y);
 
         if(this.x === x && this.y === y){
-            return " O ";
+            return "O";
         }
 
-        return " * " + saltoDeLinea;
+        return "*" + saltoDeLinea;
     }
 }
 
