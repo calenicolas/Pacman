@@ -23,6 +23,11 @@ class Pacman {
         this.y = this.y - 1;
     }
 
+    goUp(cell){
+        cell.pacmanComingFromAbove(this);
+
+    }
+
     getPosition() {
         return {
             x: this.x,

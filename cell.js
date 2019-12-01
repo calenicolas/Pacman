@@ -6,6 +6,11 @@ class Cell{
 
     }
 
+    pacmanComingFromAbove(pacman){
+        pacman.moveUp();
+
+    }
+    
     drawPacman(x, y) {
 
         let saltoDeLinea = "";

@@ -1,5 +1,4 @@
 const Cell = require("./cell");
-
 class Board {
 
     constructor() {

@@ -3,8 +3,10 @@ const readline = require('readline');
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
 
-const Pacman = require ("./pacman.js");
-const Board = require ("./board.js");
+const Pacman = require("./pacman.js");
+const Board = require("./board.js");
+const Cell = require("./cell.js");
+const Wall = require('./wall')
 
 const board = new Board();
 
@@ -16,14 +18,24 @@ process.stdin.on('keypress', (str, key) => {
   if (key.ctrl && key.name === 'c') {
     process.exit();
   } else {
-    if(key.name === "up") {
+    if (key.name === "up") {
 
-        pacman.moveUp();
+      pacman.goUp(new Wall());
     }
 
-    if(key.name === "down") {
+    if (key.name === "down") {
 
-        pacman.moveDown();
+      pacman.moveDown();
+    }
+
+    if (key.name === "left") {
+
+      pacman.moveLeft();
+    }
+
+    if (key.name === "right") {
+
+      pacman.moveRight();
     }
 
     drawBoard(board, pacman);
@@ -32,9 +44,9 @@ process.stdin.on('keypress', (str, key) => {
 
 function drawBoard(board, pacman) {
 
-    const position = pacman.getPosition();
-    const drawnBoard = board.drawPacmanAt(position.x, position.y);
+  const position = pacman.getPosition();
+  const drawnBoard = board.drawPacmanAt(position.x, position.y);
 
-    console.clear();
-    console.log(drawnBoard);
+  console.clear();
+  console.log(drawnBoard);
 }
