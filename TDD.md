@@ -23,9 +23,9 @@ fallar (triangulacion de tests)
 
 El pacman debe moverse 1 posicion:
 ```javascript
-const pacman = new Pacman() <- Esto es el _given_
+const pacman = new Pacman() <- Esto es el given
 
-pacman.moveUp() <- Esto es el _when_
+pacman.moveUp() <- Esto es el when
 
 const position = pacman.getPosition();
 
@@ -33,5 +33,5 @@ should(position).be.eql({
     x: 0,
     y: 1
 }) <- Esto (en conjunto con la linea de arriba que nos devuelve la posicion y la guarda 
-en la variable position) es el _then_
+en la variable position) es el then
 ```
