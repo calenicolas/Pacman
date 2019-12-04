@@ -13,7 +13,7 @@ pasar. Siempre de a un caso por vez.
     x => 4; y => 0.
 
 **Sugerencias**
-- Tomar casos de prueba puntuales, concretos y pequeños.
+- Tomar casos de prueba puntuales, concretos y pequeños. Al principio van a parecer obvios y tontos. _Es la idea!_ El desarrollo de software es obvio y tonto. Facil y rápido. 
 - Arrancar por un test bien simple y hacerlo pasar devolviendo lo enunciado en el *Then* del 
 test. 
 Una vez que lo hagas pasar, escribir un caso relacionado al caso anterior para hacerlo 
