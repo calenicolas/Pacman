@@ -17,7 +17,7 @@ pasar. Siempre de a un caso por vez.
 - Arrancar por un test bien simple y hacerlo pasar devolviendo lo enunciado en el *Then* del 
 test. 
 Una vez que lo hagas pasar, escribir un caso relacionado al caso anterior para hacerlo 
-fallar (triangulacion de tests)
+fallar (triangulacion de tests). A medida que los cambios puntuales van apareciendo, nuestro codigo empieza a ganar comportamiento. A partir de esta triangulacion vamos a ir generando una bateria de tests (cada it que escribamos contribuye a esa bateria) que, a medida que la bateria se vuelve mas especifica (suma mas casos puntuales) el codigo entonces se vuelve mas abstracto (maneja mas casos). 
 
 **Ejemplo**
 
