@@ -1,4 +1,7 @@
 const Cell = require("./cell");
+const Wall = require("./wall");
+
+
 class Board {
 
     constructor() {
@@ -24,6 +27,15 @@ class Board {
         });
 
         return output;
+    }
+
+
+
+    giveMeCellAt(x, y){
+        return this.cells.find(function (cell){
+            return cell.equals(x, y);
+
+        })  || new Wall();
     }
 }
 

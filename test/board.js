@@ -1,6 +1,7 @@
 const should = require ("should");
 const Board = require ("../board.js")
-const Pacman = require ("../pacman")
+const Cell = require ("../cell")
+const Wall = require ("../wall")
 describe ("creando un board", function() {
     it("el board dibuja a un pacman en la posicion dada", function() {
 
@@ -32,5 +33,31 @@ describe ("creando un board", function() {
             ` * * * * * * * \n` +
             ` * * * * O * * \n`
         );
+    });
+
+    it("el board nos pasa la celda que queremos", function() {
+
+        const board = new Board();
+
+        const x = 2,
+              y = -1;
+
+        const cell = board.giveMeCellAt(x, y);
+
+        should(cell).be.eql(new Cell(x, y));
+           
+    });
+
+    it("el board nos pasa una celda que no existe", function() {
+
+        const board = new Board();
+
+        const x = 45,
+              y = -1;
+
+        const cell = board.giveMeCellAt(x, y);
+
+        should(cell).be.eql(new Wall());
+           
     });
 });

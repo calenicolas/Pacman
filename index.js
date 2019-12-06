@@ -19,8 +19,12 @@ process.stdin.on('keypress', (str, key) => {
     process.exit();
   } else {
     if (key.name === "up") {
+      //posicion de x e y
+      var position = pacman.getPosition();
 
-      pacman.goUp(new Wall());
+      var cell = board.giveMeCellAt(position.x, position.y+1);
+      console.log(cell);
+      pacman.goUp(cell);
     }
 
     if (key.name === "down") {
@@ -47,6 +51,5 @@ function drawBoard(board, pacman) {
   const position = pacman.getPosition();
   const drawnBoard = board.drawPacmanAt(position.x, position.y);
 
-  console.clear();
   console.log(drawnBoard);
 }

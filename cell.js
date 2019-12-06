@@ -11,6 +11,12 @@ class Cell{
 
     }
     
+    
+    equals(x, y) {
+    return x === this.x && y === this.y;
+    }
+
+    
     drawPacman(x, y) {
 
         let saltoDeLinea = "";
