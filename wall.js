@@ -4,5 +4,17 @@ class Wall{
         
     }
 
+    pacmanComingFromRight(pacman){
+        
+    }
+
+    pacmanComingFromTop(pacman){
+        
+    }
+
+    pacmanComingFromLeft(pacman){
+        
+    }
+
 }
 module.exports = Wall;

@@ -151,4 +151,54 @@ describe("creando un pacman", function () {
 
     });
 
+    it('el pacman no deberia avanzar cuando se choca con una pared hacia la derecha', function(){
+        const expectedPosition = {
+            x: 0,
+            y: 0
+        };
+
+        const pacman = new Pacman();
+        const wall = new Wall();
+
+        pacman.goRight(wall);
+
+        const actualPosition = pacman.getPosition();
+
+        should(actualPosition).be.eql(expectedPosition);
+
+    });
+
+    it('el pacman no deberia avanzar cuando se choca con una pared hacia abajo', function(){
+        const expectedPosition = {
+            x: 0,
+            y: 0
+        };
+
+        const pacman = new Pacman();
+        const wall = new Wall();
+
+        pacman.goDown(wall);
+
+        const actualPosition = pacman.getPosition();
+
+        should(actualPosition).be.eql(expectedPosition);
+
+    });
+
+    it('el pacman no deberia avanzar cuando se choca con una pared hacia la izquierda', function(){
+        const expectedPosition = {
+            x: 0,
+            y: 0
+        };
+
+        const pacman = new Pacman();
+        const wall = new Wall();
+
+        pacman.goLeft(wall);
+
+        const actualPosition = pacman.getPosition();
+
+        should(actualPosition).be.eql(expectedPosition);
+
+    });
 });

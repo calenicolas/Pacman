@@ -23,20 +23,20 @@ class Pacman {
         this.y = this.y - 1;
     }
 
-    goUp(cell){
-        cell.pacmanComingFromAbove(this);
+    goUp(nextPosition){
+        nextPosition.pacmanComingFromAbove(this);
     }
     
-    goRight(cell){
-        cell.pacmanComingFromLeft(this);
+    goRight(nextPosition){
+        nextPosition.pacmanComingFromLeft(this);
     }
 
-    goDown(cell){
-        cell.pacmanComingFromTop(this);
+    goDown(nextPosition){
+        nextPosition.pacmanComingFromTop(this);
     }
 
-    goLeft(cell){
-        cell.pacmanComingFromRight(this);
+    goLeft(nextPosition){
+        nextPosition.pacmanComingFromRight(this);
     }
 
     getPosition() {
