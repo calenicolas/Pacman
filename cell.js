@@ -8,9 +8,19 @@ class Cell{
 
     pacmanComingFromAbove(pacman){
         pacman.moveUp();
-
     }
     
+    pacmanComingFromLeft(pacman){
+        pacman.moveRight();
+    }
+
+    pacmanComingFromTop(pacman){
+        pacman.moveDown();
+    }
+
+    pacmanComingFromRight(pacman){
+        pacman.moveLeft();
+    }
     
     equals(x, y) {
     return x === this.x && y === this.y;

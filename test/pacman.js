@@ -69,7 +69,7 @@ describe("creando un pacman", function () {
         should(actualPosition).be.eql(expectedPosition);
     });
 
-    it("el pacman deberia avanzar si hay una celda vacia", function () {
+    it("el pacman deberia avanzar, si hay una celda vacia, hacia arriba", function () {
         const expectedPosition = {
             x: 0,
             y: 1
@@ -83,9 +83,58 @@ describe("creando un pacman", function () {
         const actualPosition = pacman.getPosition();
 
         should(actualPosition).be.eql(expectedPosition);
-    })
+    });
 
-    it('el pacman no deberia avanzar cuando se choca con una pared', function(){
+    it("el pacman deberia avanzar, si hay una celda vacia, hacia la derecha", function () {
+        const expectedPosition = {
+            x: 1,
+            y: 0
+        };
+
+        const pacman = new Pacman();
+        const cell = new Cell();
+
+        pacman.goRight(cell);
+
+        const actualPosition = pacman.getPosition();
+
+        should(actualPosition).be.eql(expectedPosition);
+    });
+
+    it("el pacman deberia avanzar, si hay una celda vacia, hacia abajo", function () {
+        const expectedPosition = {
+            x: 0,
+            y: -1
+        };
+
+        const pacman = new Pacman();
+        const cell = new Cell();
+
+        pacman.goDown(cell);
+
+        const actualPosition = pacman.getPosition();
+
+        should(actualPosition).be.eql(expectedPosition);
+    });
+
+    it("el pacman deberia avanzar, si hay una celda vacia, hacia la izquierda", function () {
+        const expectedPosition = {
+            x: -1,
+            y: 0
+        };
+
+        const pacman = new Pacman();
+        const cell = new Cell();
+
+        pacman.goLeft(cell);
+
+        const actualPosition = pacman.getPosition();
+
+        should(actualPosition).be.eql(expectedPosition);
+    });
+    
+
+    it('el pacman no deberia avanzar cuando se choca con una pared hacia arriba', function(){
         const expectedPosition = {
             x: 0,
             y: 0
@@ -100,6 +149,6 @@ describe("creando un pacman", function () {
 
         should(actualPosition).be.eql(expectedPosition);
 
-    })
+    });
 
 });

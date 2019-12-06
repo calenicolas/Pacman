@@ -25,7 +25,18 @@ class Pacman {
 
     goUp(cell){
         cell.pacmanComingFromAbove(this);
+    }
+    
+    goRight(cell){
+        cell.pacmanComingFromLeft(this);
+    }
 
+    goDown(cell){
+        cell.pacmanComingFromTop(this);
+    }
+
+    goLeft(cell){
+        cell.pacmanComingFromRight(this);
     }
 
     getPosition() {
