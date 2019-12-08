@@ -22,24 +22,36 @@ process.stdin.on('keypress', (str, key) => {
       //posicion de x e y
       var position = pacman.getPosition();
 
-      var cell = board.giveMeCellAt(position.x, position.y+1);
+      var cell = board.giveMeCellAt(position.x, position.y + 1);
       console.log(cell);
       pacman.goUp(cell);
     }
 
     if (key.name === "down") {
+      //posicion de x e y
+      var position = pacman.getPosition();
 
-      pacman.moveDown();
+      var cell = board.giveMeCellAt(position.x, position.y - 1);
+      console.log(cell);
+      pacman.goDown(cell);
     }
 
     if (key.name === "left") {
+      //posicion de x e y
+      var position = pacman.getPosition();
 
-      pacman.moveLeft();
+      var cell = board.giveMeCellAt(position.x - 1, position.y);
+      console.log(cell);
+      pacman.goLeft(cell);
     }
 
     if (key.name === "right") {
+      //posicion de x e y
+      var position = pacman.getPosition();
 
-      pacman.moveRight();
+      var cell = board.giveMeCellAt(position.x + 1, position.y);
+      console.log(cell);
+      pacman.goRight(cell);
     }
 
     drawBoard(board, pacman);

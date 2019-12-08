@@ -23,19 +23,19 @@ class Pacman {
         this.y = this.y - 1;
     }
 
-    goUp(nextPosition){
+    goUp(nextPosition) {
         nextPosition.pacmanComingFromAbove(this);
     }
-    
-    goRight(nextPosition){
+
+    goRight(nextPosition) {
         nextPosition.pacmanComingFromLeft(this);
     }
 
-    goDown(nextPosition){
+    goDown(nextPosition) {
         nextPosition.pacmanComingFromTop(this);
     }
 
-    goLeft(nextPosition){
+    goLeft(nextPosition) {
         nextPosition.pacmanComingFromRight(this);
     }
 
