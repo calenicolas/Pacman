@@ -60,4 +60,21 @@ describe ("creando un board", function() {
         should(cell).be.eql(new Wall());
            
     });
+
+
+    it("el board no se pincha cuando vamos a la derecha", function() {
+
+        const board = new Board();
+
+        const x = 3,
+              y = 1;
+
+        const drawnBoard = board.drawPacmanAt(x, y);
+
+        should(drawnBoard).be.eql(
+            ` * * * * * * O \n` +
+            ` * * * * * * * \n` +
+            ` * * * * * * * \n`
+        );
+    });
 });
