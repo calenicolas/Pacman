@@ -1,22 +1,30 @@
-class Cell{
+class Cell {
 
-    constructor(x, y){
-        this. x = x;
-        this. y = y;
-
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
     }
 
-    pacmanComingFromAbove(pacman){
+    pacmanComingFromAbove(pacman) {
         pacman.moveUp();
-
     }
-    
-    
+
+    pacmanComingFromLeft(pacman) {
+        pacman.moveRight();
+    }
+
+    pacmanComingFromTop(pacman) {
+        pacman.moveDown();
+    }
+
+    pacmanComingFromRight(pacman) {
+        pacman.moveLeft();
+    }
+
     equals(x, y) {
-    return x === this.x && y === this.y;
+        return x === this.x && y === this.y;
     }
 
-    
     drawPacman(x, y) {
 
         let saltoDeLinea = "";
