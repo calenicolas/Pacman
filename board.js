@@ -4,17 +4,30 @@ const Wall = require("./wall");
 
 class Board {
 
-    constructor() {
-        this.cells = [];
+    constructor(cells) {
+        const defaultCells = [];
 
-        for (let y = 1; y > -2; y--){
-            for (let x = -3; x < 4; x++){
+        for (let y = 1; y > -2; y--) {
+            for (let x = -3; x < 4; x++) {
                 const cell = new Cell(x, y);
-                this.cells.push(cell);
+                defaultCells.push(cell);
             }
         }
 
-        
+        this.cells = cells || defaultCells;
+
+    }
+
+    draw() {
+
+        let output = '';
+
+        this.cells.forEach((cell) => {
+
+            output = output + cell.draw();
+        })
+        return output
+
     }
 
     drawPacmanAt(x, y) {
@@ -22,7 +35,7 @@ class Board {
         let output = '';
 
         this.cells.forEach((cell) => {
-            
+
             output = output + ' ' + cell.drawPacman(x, y);
         });
 
@@ -31,11 +44,11 @@ class Board {
 
 
 
-    giveMeCellAt(x, y){
-        return this.cells.find(function (cell){
+    giveMeCellAt(x, y) {
+        return this.cells.find(function (cell) {
             return cell.equals(x, y);
 
-        })  || new Wall();
+        }) || new Wall();
     }
 }
 

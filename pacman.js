@@ -7,6 +7,10 @@ class Pacman {
         this.observador = observador;
     }
 
+    left(){
+        
+    }
+    
     moveRight() {
         this.x = this.x + 1;
     }

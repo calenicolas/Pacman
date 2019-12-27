@@ -1,8 +1,17 @@
 class Cell {
 
-    constructor(x, y) {
+    constructor(x, y, contenido) {
         this.x = x;
         this.y = y;
+        this.contenido = contenido;
+        console.log(contenido);
+    }
+
+    draw(){
+        console.log(this.contenido);
+     
+        return this.contenido.draw()
+        
     }
 
     pacmanComingFromTop(pacman) {
