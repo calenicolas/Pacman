@@ -7,7 +7,19 @@ const Pacman = require ("../pacman")
 
 
 describe('la pelotita', function () {
-    it('la pelotita suma puntos cuando se la comen', function () {
+    it('las pelotitas se dibujan', function () {
+        const pacman = new Pacman()
+        const pelotita = new Pelotita()
+        const board = new Board([
+            new Cell(0, 2, pelotita), new Cell(0, 1, pelotita), new Cell(0, 0, pacman)
+        ])
+
+        const drawnBoard = board.draw();
+
+        should(drawnBoard).be.eql('**O');
+    });
+
+    it("las pelotitas son comidas por el pacman", () => {
         const pacman = new Pacman()
         const pelotita = new Pelotita()
         const board = new Board([
@@ -15,11 +27,8 @@ describe('la pelotita', function () {
         ])
 
         pacman.left();
-        pacman.left();
-
-
         const drawnBoard = board.draw();
-        should(drawnBoard).be.eql('0  ');
 
-    })
+        should(drawnBoard).be.eql('*O ');
+    });
 })

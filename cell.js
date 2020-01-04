@@ -4,14 +4,10 @@ class Cell {
         this.x = x;
         this.y = y;
         this.contenido = contenido;
-        console.log(contenido);
     }
 
     draw(){
-        console.log(this.contenido);
-     
-        return this.contenido.draw()
-        
+        return this.contenido.draw();
     }
 
     pacmanComingFromTop(pacman) {

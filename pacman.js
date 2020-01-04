@@ -1,16 +1,14 @@
 class Pacman {
 
-    constructor(observador) {
+    constructor() {
         this.x = 0;
         this.y = 0;
-
-        this.observador = observador;
-    }
-
-    left(){
-        
     }
     
+    left() {
+        
+    }
+
     moveRight() {
         this.x = this.x + 1;
     }
@@ -48,6 +46,9 @@ class Pacman {
             x: this.x,
             y: this.y
         };
+    }
+    draw(){
+        return "O";
     }
 }
 

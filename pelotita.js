@@ -1,5 +1,7 @@
 class Pelotita {
-    
+    draw(){
+        return "*";
+    }
 }
 
 
